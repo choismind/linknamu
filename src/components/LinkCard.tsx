@@ -34,11 +34,13 @@ export default function LinkCard({ link }: { link: Link }) {
       onClick={() => reportClick(link.id)}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="block rounded-2xl border border-black/10 bg-black/[0.02] px-5 py-4 text-center transition hover:-translate-y-0.5 hover:border-black/20 hover:bg-black/[0.05] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current dark:border-white/15 dark:bg-white/[0.04] dark:hover:border-white/30 dark:hover:bg-white/[0.08]"
+      className="block rounded-3xl border border-white/12 bg-white/[0.06] px-6 py-5 text-center shadow-[0_8px_32px_-12px_rgba(2,10,25,0.65)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.1] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/80"
     >
-      <span className="font-medium">{link.label}</span>
+      <span className="text-[0.975rem] font-semibold tracking-tight text-white/95">
+        {link.label}
+      </span>
       {link.description && (
-        <span className="mt-1 block text-xs text-black/50 dark:text-white/50">
+        <span className="mt-1.5 block text-xs text-white/55">
           {link.description}
         </span>
       )}

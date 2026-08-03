@@ -19,12 +19,14 @@ export default function ProfileHeader({
         width={112}
         height={112}
         priority
-        className="size-28 rounded-full object-cover ring-2 ring-black/10 dark:ring-white/15"
+        // placehold.co는 SVG로 응답하므로 최적화를 건너뛴다
+        unoptimized
+        className="size-28 rounded-full object-cover shadow-[0_18px_50px_-18px_rgba(56,189,248,0.65)] ring-1 ring-white/25"
       />
-      <h1 className="mt-5 text-2xl font-semibold tracking-tight">{name}</h1>
-      <p className="mt-1.5 text-sm text-black/60 dark:text-white/60">
-        {tagline}
-      </p>
+      <h1 className="mt-6 text-[1.7rem] leading-tight font-bold tracking-tight text-white">
+        {name}
+      </h1>
+      <p className="mt-2 text-sm text-white/60">{tagline}</p>
     </header>
   );
 }

@@ -1,27 +1,42 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --foreground: #eef4ff;
+  /* 쿨 톤 그라데이션 배경 */
+  --background: #070d18;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Pretendard Variable", var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Pretendard", "Apple SD Gothic Neo",
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      1100px 620px at 8% -12%,
+      rgba(56, 189, 248, 0.28),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 520px at 96% 4%,
+      rgba(129, 140, 248, 0.26),
+      transparent 58%
+    ),
+    radial-gradient(
+      760px 620px at 50% 108%,
+      rgba(45, 212, 191, 0.16),
+      transparent 62%
+    ),
+    linear-gradient(180deg, #0a1424 0%, #0b1b2e 46%, #070f1c 100%);
+  background-attachment: fixed;
+  font-family:
+    "Pretendard Variable", var(--font-geist-sans), "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
 }

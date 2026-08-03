@@ -9,15 +9,15 @@ export type Link = {
 export type Profile = {
   name: string;
   tagline: string;
-  /** public/ 기준 경로 */
+  /** public/ 기준 경로 또는 외부 이미지 URL */
   avatar: string;
   links: Link[];
 };
 
 export const profile: Profile = {
-  name: "강감찬",
-  tagline: "세계 최강의 바이브 코더",
-  avatar: "/profile.png",
+  name: "개발자",
+  tagline: "플스택 개발자 | 연습용이에요",
+  avatar: "https://placehold.co/150x150/green/white",
   links: [
     {
       id: "github",
